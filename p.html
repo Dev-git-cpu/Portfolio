@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="basket-1">
+            <h1><span></span> Apples</h1>
+             <p>Basket-1</p>
+        </div>
+        <button class="left-arrow" title="left arrow">left arrow
+        </button>
+        <button class="right-arrow" title="right arrow">right arrow</button>
+        <div class="basket-2">
+            <h1><span></span>Apples</h1>
+             <p>Basket-2</p>
+        </div>
+    </section>
+    
+</body>
+<script>
+    const firstBasket = document.querySelector('.basket-1 span')
+    const secoundBasket = document.querySelector('.basket-2 span')
+
+    const rightArrow = document.querySelector('.right-arrow')
+    const leftArrow = document.querySelector('.left-arrow')
+
+    const totalApple = 10;
+    let secoundBasketAppleCount = 0;
+    let firstBasketAppleCount = totalApple-secoundBasketAppleCount;
+
+    firstBasket.innerText = firstBasketAppleCount
+    secoundBasket.innerText = secoundBasketAppleCount
+
+    rightArrow.addEventListener('click', ()=>{
+        if (firstBasketAppleCount > 0) {
+            firstBasketAppleCount--
+        firstBasket.innerText = firstBasketAppleCount
+        secoundBasketAppleCount++
+        secoundBasket.innerText = secoundBasketAppleCount
+        }
+        
+
+    })
+    leftArrow.addEventListener('click', ()=>{
+        if (secoundBasketAppleCount > 0) {
+            firstBasketAppleCount++
+        firstBasket.innerText = firstBasketAppleCount
+        secoundBasketAppleCount--
+        secoundBasket.innerText = secoundBasketAppleCount
+
+        }
+        
+    })
+
+</script>
+</html>

@@ -1,0 +1,7 @@
+What is component
+Why use component
+Types of component
+- 1.Functional Component
+  2.Class Component
+Create a component
+Use a component 

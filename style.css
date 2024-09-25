@@ -1,0 +1,11 @@
+section{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    align-items: center ;
+}
+button{
+    padding: 20px;
+}
